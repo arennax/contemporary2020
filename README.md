@@ -40,7 +40,7 @@ Note that `sk_stats.py` in this program currently only supports python 2.7.
 
 + [SEACRAFT on Zenodo](https://zenodo.org/communities/seacraft/search?page=1&size=20&q=effort)
 + [COCOMO Style](https://github.com/arennax/rome_icse/tree/master/data/cocomo_style)
-+ [Github data](https://github.com/arennax/rome_icse/tree/master/data/github_Qi)
++ [Github data](https://github.com/arennax/contemporary2020/tree/master/testData)
 
 ## Source Code
 
