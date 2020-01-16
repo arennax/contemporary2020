@@ -3,7 +3,7 @@ import pprint
 import pandas as pd
 from pandas.io.json import json_normalize
 
-headers = {"Authorization": "token ce8f0a7f1e35efaae2e53372cb9db3cc370983a4"}
+headers = {"Authorization": "token hide"}
 
 
 def run_query(query):  # A simple function to use requests.post to make the API call. Note the json= section.
