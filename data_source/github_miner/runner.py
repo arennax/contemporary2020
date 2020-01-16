@@ -419,16 +419,16 @@ class Miner:
                         )
 
 
-_token = {"Suvodeep": "39999cfb6286be00d52c663d0383894eaf552337",
-          "Patrick": "ce8f0a7f1e35efaae2e53372cb9db3cc370983a4",
-          #   “Amrit”:"57b854031d4433381cf37d8f965e2d384c094977",
-          "Joy": "9461c672a98b594e3ddb026c1750a09ab9a0dac0",
-          "Zhe": "4f9c8e0a228eb99cd18a04b6388e6a3b2ea656c9",
-          "Shrikanth": "ac1192c48d6235f0b9ca4342051324600f34e2b8",
-          "tim": "7381db723d2576391ba0295de48d215b11eba731",
-          "George": "4a24b6afcc1a3334348e166379175c3515c2bd80",
-          "Rui": "573c5887db367d2384dbdd19052bc33ba7e2bacc",
-          "Rishabh": "bcddf7453cb063663c3a3fab081ff0e747b2758b"}
+_token = {"Suvodeep": "hide",
+          "Patrick": "hide",
+          #   “Amrit”:"hide",
+          "Joy": "hide",
+          "Zhe": "hide",
+          "Shrikanth": "hide",
+          "tim": "hide",
+          "George": "hide",
+          "Rui": "hide",
+          "Rishabh": "hide"}
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
