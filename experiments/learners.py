@@ -28,7 +28,7 @@ def CART(dataset, a=12, b=1, c=2):
         test_actual_Y = test_actual_effort.values
 
         mre_list.append(mre_calc(test_predict_Y, test_actual_Y))   ######### for MRE
-        sa_list.append(sa_calc(test_predict_Y, test_actual_Y))   ######### for SA
+        sa_list.append(sa_calc(test_predict_Y, test_actual_Y, train_actual_effort))   ######### for SA
         # rse_list.append(rse_calc(test_predict_Y, test_actual_Y))  ######### for RSE
 
     return mre_list, sa_list, rse_list
@@ -53,7 +53,7 @@ def KNN(dataset, n_neighbors = 3):
         test_actual_Y = test_actual_effort.values
 
         mre_list.append(mre_calc(test_predict_Y, test_actual_Y))   ######### for MRE
-        sa_list.append(sa_calc(test_predict_Y, test_actual_Y))   ######### for SA
+        sa_list.append(sa_calc(test_predict_Y, test_actual_Y, train_actual_effort))   ######### for SA
         # rse_list.append(rse_calc(test_predict_Y, test_actual_Y))  ######### for RSE
 
     return mre_list, sa_list, rse_list
@@ -78,7 +78,7 @@ def SVM(dataset):
         test_actual_Y = test_actual_effort.values
 
         mre_list.append(mre_calc(test_predict_Y, test_actual_Y))   ######### for MRE
-        sa_list.append(sa_calc(test_predict_Y, test_actual_Y))   ######### for SA
+        sa_list.append(sa_calc(test_predict_Y, test_actual_Y, train_actual_effort))   ######### for SA
         # rse_list.append(rse_calc(test_predict_Y, test_actual_Y))  ######### for RSE
 
     return mre_list, sa_list, rse_list
@@ -103,7 +103,7 @@ def RF(dataset, max_depth=3):
         test_actual_Y = test_actual_effort.values
 
         mre_list.append(mre_calc(test_predict_Y, test_actual_Y))   ######### for MRE
-        sa_list.append(sa_calc(test_predict_Y, test_actual_Y))   ######### for SA
+        sa_list.append(sa_calc(test_predict_Y, test_actual_Y, train_actual_effort))   ######### for SA
         # rse_list.append(rse_calc(test_predict_Y, test_actual_Y))  ######### for RSE
 
     return mre_list, sa_list, rse_list
