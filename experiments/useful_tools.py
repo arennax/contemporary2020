@@ -31,20 +31,36 @@ def normalize(df):
 def mre_calc(y_predict, y_actual):
     mre = []
     for predict, actual in zip(y_predict, y_actual):
-        mre.append(abs(predict - actual) / (actual+0.000000001))
+        if actual == 0:
+            if predict == 0:
+                mre.append(0)
+            elif abs(predict) <= 1:
+                mre.append(1)
+            else:
+                mre.append(round(abs(predict - actual)+1 / (actual+1), 3))
+        else:
+            mre.append(round(abs(predict - actual) / (actual), 3))
     mMRE = np.median(mre)
-    if mMRE == 0:
-        mMRE = np.mean(mre)
+    # if mMRE == 0:
+    #     mMRE = np.mean(mre)
     return mMRE
 
 
-def sa_calc(Y_predict, Y_actual):
-    ar = 0
+def sa_calc(Y_predict, Y_actual, X_actual):
+    Absolute_Error = 0
     for predict, actual in zip(Y_predict, Y_actual):
-        ar += abs(predict - actual)
-    mar = ar / (len(Y_predict))
-    marr = sum(Y_actual) / len(Y_actual)
-    sa_error = (1 - mar / marr)
+        Absolute_Error += abs(predict - actual)
+    Mean_Absolute_Error = Absolute_Error / (len(Y_predict))
+    random_guess = np.mean(X_actual)
+    AE_random_guess = 0
+    for predict in Y_predict:
+        AE_random_guess += abs(predict - random_guess)
+    MAE_random_guess = AE_random_guess / (len(Y_predict))
+    if MAE_random_guess == 0:
+        sa_error = round((1 - (Mean_Absolute_Error+1) / (MAE_random_guess+1)), 3)
+    else:
+        sa_error = round((1 - Mean_Absolute_Error / MAE_random_guess), 3)
+
     return sa_error
 
 
