@@ -85,7 +85,7 @@ def flash(train_input, train_actual_effort, test_input, test_actual_effort, meth
         if methods == 0:
             List_Y.append(mre_calc(test_predict_Y, test_actual_Y))  ######### for MRE flash
         if methods == 1:
-            List_Y.append(sa_calc(test_predict_Y, test_actual_Y))  ######### for SA flash
+            List_Y.append(sa_calc(test_predict_Y, test_actual_Y, train_actual_effort))  ######### for SA flash
         # List_Y.append(rse_calc(test_predict_Y, test_actual_Y))  ######### for RSE flash
 
     remain_pool = all_case - set(modeling_pool)
@@ -131,7 +131,7 @@ def flash(train_input, train_actual_effort, test_input, test_actual_effort, meth
                 candi_actual_Y = test_actual_effort.values
 
                 # List_Y.append(mre_calc(candi_pred_Y, candi_actual_Y))  ######### for MRE flash
-                List_Y.append(sa_calc(candi_pred_Y, candi_actual_Y))  ######### for SA flash
+                List_Y.append(sa_calc(candi_pred_Y, candi_actual_Y, train_actual_effort))  ######### for SA flash
                 # List_Y.append(rse_calc(candi_pred_Y, candi_actual_Y))  ######### for RSE flash
 
             else:
