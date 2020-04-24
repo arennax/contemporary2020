@@ -29,7 +29,7 @@ def CART_DE(dataset, methods):
             if methods == 0:
                 return mre_calc(test_predict_Y, test_actual_Y)  ############# MRE
             if methods == 1:
-                return sa_calc(test_predict_Y, test_actual_Y)  ############# SA
+                return sa_calc(test_predict_Y, test_actual_Y, train_actual_effort)  ############# SA
             # return rse_calc(test_predict_Y, test_actual_Y)  ############# RSE
 
         metrics = methods
