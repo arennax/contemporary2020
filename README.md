@@ -13,7 +13,7 @@ Submitted to [Transactions on Software Engineering](https://ieeexplore.ieee.org/
 
 ## Experiment Replication
 
-To reproduce the experiment results, execute `main.py` in directory `experiments`, you need to select specific performance metrics inside `main.py`: `methods = 0` stands for Magnitude of the Relative Error, `methods = 1` stands for SA (Standardized Accuracy). You will get a `.txt` file which stores the numeric experiment results in directory `output`.
+To reproduce the experiment results, execute `runner.sh` in directory `experiments`, the perofromance results will be created in directory `result_experiments`. The result files include two performance measurements (please see paper for details), `metric0` stands for Magnitude of the Relative Error, `metric1` stands for SA (Standardized Accuracy).
 
 To get the scott-knott test results of experiments, execute `sk_stats.py` by typing `cat name.txt| python2 sk_stats.py --text 30 --latex True` (For windows, use `type` instead of `cat`), this will output a latex-friendly scott-knott charts for this specific `.txt` file. The actually output will look like this:
 
