@@ -26,12 +26,12 @@ Note that `sk_stats.py` in this program currently only supports python 2.7.
 + Tianpei Xia
   + Computer Science, NC State University, USA 
   + txia4@ncsu.edu
-+ Jianfeng Chen
-  + Computer Science, NC State University, USA 
-  + jchen37@ncsu.edu
 + Rui Shu
   + Computer Science, NC State University, USA 
   + rshu@ncsu.edu
++ Xipeng Shen
+  + Computer Science, NC State University, USA 
+  + xshen5@ncsu.edu
 + Tim Menzies
   + Computer Science, NC State University, USA 
   + timm@ieee.org
