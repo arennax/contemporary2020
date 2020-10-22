@@ -38,16 +38,14 @@ Note that `sk_stats.py` in this program currently only supports python 2.7.
 
 ## Dataset
 
-+ [SEACRAFT on Zenodo](https://zenodo.org/communities/seacraft/search?page=1&size=20&q=effort)
-+ [COCOMO Style](https://github.com/arennax/rome_icse/tree/master/data/cocomo_style)
-+ [Github data](https://github.com/arennax/contemporary2020/tree/master/testData)
++ [Classic data](https://github.com/arennax/contemporary2020/tree/master/data_experiment/classic)
++ [COCOMO data](https://github.com/arennax/contemporary2020/tree/master/data_experiment/cocomo)
++ [Contemporary data](https://github.com/arennax/contemporary2020/tree/master/data_experiment/contemporary)
 
 ## Source Code
 
-+ [FLASH](https://github.com/arennax/rome_icse/blob/master/experiments/flash0.py)
-+ [Optimizers](https://github.com/arennax/rome_icse/blob/master/experiments/optimizers.py)
-+ [Estimators](https://github.com/arennax/rome_icse/blob/master/experiments/learners.py)
-+ [ROME and DE](https://github.com/arennax/rome_icse/blob/master/experiments/tuned_learners.py)
++ [Optimizers](https://github.com/arennax/contemporary2020/blob/master/experiments/optimizers.py)
++ [Estimators](https://github.com/arennax/contemporary2020/blob/master/experiments/learners.py)
 
 ## License
 
