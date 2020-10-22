@@ -41,8 +41,6 @@ def mre_calc(y_predict, y_actual):
         else:
             mre.append(round(abs(predict - actual) / (actual), 3))
     mMRE = np.median(mre)
-    # if mMRE == 0:
-    #     mMRE = np.mean(mre)
     return mMRE
 
 
@@ -60,16 +58,20 @@ def sa_calc(Y_predict, Y_actual, X_actual):
         sa_error = round((1 - (Mean_Absolute_Error+1) / (MAE_random_guess+1)), 3)
     else:
         sa_error = round((1 - Mean_Absolute_Error / MAE_random_guess), 3)
-
     return sa_error
 
 
-# def rse_calc(y_predict, y_actual):
-#     rse = []
-#     for predict, actual in zip(y_predict, y_actual):
-#         rse.append((predict/actual - 1) ** 2)
-#     mRSE = np.mean(rse)
-#     return mRSE
+def data_goal_arrange(repo_name, directory):
+    df_raw = pd.read_csv(directory + repo_name, sep=',')
+    df_raw = df_raw.drop(columns=['dates'])
+    last_col = 'number_of_commits'
+    cols = list(df_raw.columns.values)
+    cols.pop(cols.index(last_col))
+    df_adjust = df_raw[cols+[last_col]]
+
+    return df_adjust
+
+
 
 
 if __name__ == '__main__':

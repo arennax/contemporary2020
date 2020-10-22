@@ -1,6 +1,5 @@
 import numpy as np
-from data_source.data_touse import *
-from experiments.useful_tools import KFold_df, normalize, mre_calc, sa_calc
+from experiments.utils import KFold_df, normalize, mre_calc, sa_calc
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
 from sklearn import svm
@@ -107,10 +106,3 @@ def RF(dataset, max_depth=3):
         # rse_list.append(rse_calc(test_predict_Y, test_actual_Y))  ######### for RSE
 
     return mre_list, sa_list, rse_list
-
-
-if __name__ == '__main__':
-    listA = []
-    for i in range(2):
-        listA.append(CART(data_github_0())[0])
-    print(np.array(sorted(listA)).flatten())

@@ -3,7 +3,7 @@ import random
 from sklearn.tree import DecisionTreeRegressor
 from sklearn import tree
 import matplotlib.pyplot as plt
-from experiments.useful_tools import KFold_df, normalize, mre_calc, sa_calc
+from experiments.utils import KFold_df, normalize, mre_calc, sa_calc
 
 
 def de(fun_opt, methods, bounds, mut=0.8, crossp=0.7, popsize=20, itrs=10):
@@ -137,21 +137,12 @@ def flash(train_input, train_actual_effort, test_input, test_actual_effort, meth
             else:
                 life -= 1
 
-    temp_tree = candi_model
-    tree.plot_tree(temp_tree, feature_names=list(train_input.columns.values))
-    plt.show()
+    # temp_tree = candi_model
+    # tree.plot_tree(temp_tree, feature_names=list(train_input.columns.values))
+    # plt.show()
 
     if methods == 0:
         return np.min(List_Y)  ########## min for MRE, RSE
     if methods == 1:
         return np.max(List_Y)  ########## min for SA
 
-
-if __name__ == '__main__':
-
-    def adder(a,b):
-        return a+b
-
-
-    it = de(adder, bounds=[(0, 10), (0, 10)])
-    print(it)
