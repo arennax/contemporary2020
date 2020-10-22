@@ -1,3 +1,6 @@
+import sys
+sys.path.append(r'../')
+
 import numpy as np
 import time
 from experiments.learners import *
