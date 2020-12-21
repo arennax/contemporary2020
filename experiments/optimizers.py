@@ -180,9 +180,9 @@ def de(fun_opt, metrics, bounds, mut=0.5, crossp=0.5, popsize=20, itrs=10):
 #     # plt.show()
 
 #     if methods == 0:
-#         return np.median(List_Y)  ########## min for MRE, RSE
+#         return np.median(List_Y)  ########## MRE
 #     if methods == 1:
-#         return np.median(List_Y)  ########## min for SA
+#         return np.median(List_Y)  ########## SA
 
 def flash(train_input, train_actual_effort, test_input, test_actual_effort, metrics, pop_size):
     def convert(index):  # 12 12 20
@@ -266,8 +266,8 @@ def flash(train_input, train_actual_effort, test_input, test_actual_effort, metr
     # plt.show()
 
     if metrics == 0:
-        return np.median(List_Y)  ########## min for MRE
+        return np.median(List_Y)  ########## MRE
     if metrics == 1:
-        return np.median(List_Y)  ########## min for SA
+        return np.median(List_Y)  ########## SA
     
     
